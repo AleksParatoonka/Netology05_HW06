@@ -17,7 +17,6 @@ public:
         //name = "Неизвестно";
     }
     int get_edges();
-    virtual bool is_shape_ideal();
-    virtual void print_about();
+    virtual void print_info();
 };
 

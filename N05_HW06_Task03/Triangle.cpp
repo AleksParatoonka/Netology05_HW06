@@ -21,16 +21,10 @@ double Triangle::get_angle(char x) {
         return angle_c;
     }
 }
-bool Triangle::is_shape_ideal()  {
-    if (edges == 3 && (angle_a + angle_b + angle_c) == 180) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-void Triangle::print_about()  {
-    Shape::print_about();
-    std::cout << "Стороны: a= " << edge_a << " b=" << edge_b << " c=" << edge_c << std::endl;
-    std::cout << "Углы: A=" << angle_a << " B=" << angle_b << " C=" << angle_c << std::endl;
+
+void Triangle::print_info()  {
+    Shape::print_info();
+    std::cout << "Стороны: a=" << get_edge('a') << " b=" << get_edge('b') << " c=" << get_edge('c') << std::endl;
+    std::cout << "Углы: A=" << get_angle('a') << " B=" << get_angle('b') << " C=" << get_angle('c') << std::endl;
+    std::cout << std::endl;
 }

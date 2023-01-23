@@ -5,6 +5,5 @@ class Rhombus :
 {
     public:
         Rhombus(double edge_a, double angle_a, double angle_b) :Parallelogram(edge_a, edge_a, angle_a, angle_b, "Ромб") {}
-        bool is_shape_ideal() override;
 };
 

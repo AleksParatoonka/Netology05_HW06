@@ -19,10 +19,9 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    Shape shape;
+    //Shape shape;
     Triangle triangle(10, 20, 30, 50, 60, 70);
-    Square_Triangle square_triangle1(10, 20, 30, 50, 60);
-    Square_Triangle square_triangle2(10, 20, 30, 50, 40);
+    Square_Triangle square_triangle(10, 20, 30, 50, 60);
     Isosceles_Triangle isosceles_triangle(10, 20, 50, 60);
     Equilateral_Triangle equilateral_triangle(30);
 
@@ -32,29 +31,32 @@ int main()
     Square square(20);
     Rhombus rhombus(30, 30, 40);
 
-    shape.print_about();
-    std::cout << std::endl;
-    triangle.print_about();
-    std::cout << std::endl;
-    square_triangle1.print_about();
-    std::cout << std::endl;
-    square_triangle2.print_about();
-    std::cout << std::endl;
-    isosceles_triangle.print_about();
-    std::cout << std::endl;
-    equilateral_triangle.print_about();
-    std::cout << std::endl;
+    Triangle* par_triangle = &triangle;
+    par_triangle->print_info();
 
-    std::cout << std::endl;
+    Triangle* par_square_triangle = &square_triangle;
+    par_square_triangle->print_info();
 
-    poly.print_about();
-    std::cout << std::endl;
-    rectangle.print_about();
-    std::cout << std::endl;
-    square.print_about();
-    std::cout << std::endl;
-    parallelogram.print_about();
-    std::cout << std::endl;
-    rhombus.print_about();
-    std::cout << std::endl;
+    Triangle* par_isosceles_triangle = &isosceles_triangle;
+    par_isosceles_triangle->print_info();
+
+    Triangle* par_equilateral_triangle = &equilateral_triangle;
+    par_equilateral_triangle->print_info();
+
+    Poly* par_poly = &poly;
+    par_poly->print_info();
+
+    Poly* par_rectangle = &rectangle;
+    par_rectangle->print_info();
+
+    Poly* par_square = &square;
+    par_square->print_info();
+
+    Poly* par_parallelogram = &parallelogram;
+    par_parallelogram->print_info();
+
+    Poly* par_rhombus = &rhombus;
+    par_rhombus->print_info();
+ 
+    
 }

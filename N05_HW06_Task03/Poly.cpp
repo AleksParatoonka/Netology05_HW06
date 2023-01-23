@@ -25,17 +25,10 @@ double Poly::get_angle(char x) {
         return angle_d;
     }
 }
-bool Poly::is_shape_ideal(){
-    if (edges == 4 && (angle_a + angle_b + angle_c + angle_d) == 360) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
 
-void Poly::print_about(){
-    Shape::print_about();
-    std::cout << "Стороны: a= " << edge_a << " b=" << edge_b << " c=" << edge_c << " d=" << edge_d << std::endl;
-    std::cout << "Углы: A=" << angle_a << " B=" << angle_b << " C=" << angle_c << " D=" << angle_d << std::endl;
+void Poly::print_info(){
+    Shape::print_info();
+    std::cout << "Стороны: a=" << get_edge('a') << " b=" << get_edge('b') << " c=" << get_edge('c') << " d=" << get_edge('d') << std::endl;
+    std::cout << "Углы: A=" << get_angle('a') << " B=" << get_angle('b') << " C=" << get_angle('c') << " D=" << get_angle('d') << std::endl;
+    std::cout << std::endl;
 }

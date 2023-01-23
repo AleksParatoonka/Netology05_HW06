@@ -37,7 +37,6 @@ public:
 
     double get_edge(char x);
     double get_angle(char x);
-    bool is_shape_ideal() override;
-    void print_about() override;
+    void print_info() override;
 };
 
